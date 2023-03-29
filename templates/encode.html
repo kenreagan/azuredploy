@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encode Image</title>
+</head>
+<body>
+    <h1>Encode Image</h1>
+    <form method="POST" action="{{ url_for('do_encode') }}" enctype="multipart/form-data">
+        <label for="source-image">Source Image:</label>
+        <input type="file" id="source-image" name="source-image" accept="image/*" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br>
+        <label for="destination-image">Destination Image:</label>
+        <input type="text" id="destination-image" name="destination-image" required>
+        <br>
+        
+        <input type="submit" value="Encode">
+    </form>
+</body>
+</html>
